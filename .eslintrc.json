@@ -94,6 +94,14 @@
     "react-redux/useSelector-prefer-selectors": ["error", { "matching": "^select.*"}],
     "import/prefer-default-export": "off",
     "import/no-duplicates": "off",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": [
+        "**/*.test.ts?(x)",
+        "**/*.spec.ts?(x)",
+        "**/*.stories.ts?(x)",
+        "**/mocks/**/*"
+      ]
+    }],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -109,7 +117,10 @@
         "groups": [
           ["/^react$/", "/^react-native$/", "/^next/", "/^react-dom$/"],
           "module",
-          ["/^~/"],
+          [
+            "/^@(common|components|constants|contexts|mocks|services|styles|utils|shared|store)/",
+            "/^~/"
+          ],
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "ignore", "ignoreCase": true }
