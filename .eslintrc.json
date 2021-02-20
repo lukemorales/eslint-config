@@ -1,0 +1,123 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:radar/recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:react-redux/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:jest-formatting/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "radar",
+    "react",
+    "react-redux",
+    "react-hooks",
+    "no-secrets",
+    "immutable",
+    "@typescript-eslint",
+    "jest",
+    "jest-formatting",
+    "jest-dom",
+    "testing-library",
+    "prettier",
+    "import-helpers"
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error", {
+      "printWidth": 80,
+      "tabWidth": 2,
+      "singleQuote": true,
+      "trailingComma": "all",
+      "arrowParens": "always"
+    }],
+    "arrow-body-style": ["error", "as-needed"],
+    "implicit-arrow-linebreak": "off",
+    "camelcase":"off",
+    "no-secrets/no-secrets": ["error", { "tolerance": 3.2 }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsForRegex": ["^draft"]
+    }],
+    "prefer-template": "error",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ],
+    "immutable/no-mutation": "error",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "assert": "either"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/no-array-index-key": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-redux/useSelector-prefer-selectors": ["error", { "matching": "^select.*"}],
+    "import/prefer-default-export": "off",
+    "import/no-duplicates": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react$/", "/^react-native$/", "/^next/"],
+          "module",
+          ["/^~/"],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "ignore", "ignoreCase": true }
+      }
+    ]
+  }
+}
