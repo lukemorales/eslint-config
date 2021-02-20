@@ -34,8 +34,6 @@
     "react",
     "react-redux",
     "react-hooks",
-    "no-secrets",
-    "immutable",
     "@typescript-eslint",
     "jest",
     "jest-formatting",
@@ -46,7 +44,9 @@
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "rules": {
@@ -60,7 +60,6 @@
     "arrow-body-style": ["error", "as-needed"],
     "implicit-arrow-linebreak": "off",
     "camelcase":"off",
-    "no-secrets/no-secrets": ["error", { "tolerance": 3.2 }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-unused-expressions": "off",
     "no-use-before-define": "off",
@@ -79,7 +78,6 @@
         "allowSingleExtends": true
       }
     ],
-    "immutable/no-mutation": "error",
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/label-has-associated-control": [
       "error",
@@ -111,7 +109,7 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          ["/^react$/", "/^react-native$/", "/^next/"],
+          ["/^react$/", "/^react-native$/", "/^next/", "/^react-dom$/"],
           "module",
           ["/^~/"],
           ["parent", "sibling", "index"]
