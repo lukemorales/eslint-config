@@ -58,7 +58,7 @@
     "arrow-body-style": ["error", "as-needed"],
     "implicit-arrow-linebreak": "off",
     "camelcase":"off",
-    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
     "no-unused-expressions": "off",
     "no-use-before-define": "off",
     "no-param-reassign": ["error", {
@@ -96,10 +96,14 @@
     "import/no-duplicates": "off",
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
+        "**/test.ts?(x)",
         "**/*.test.ts?(x)",
+        "**/spec.ts?(x)",
         "**/*.spec.ts?(x)",
+        "**/stories.ts?(x)",
         "**/*.stories.ts?(x)",
-        "**/mocks/**/*"
+        "**/mocks/**/*",
+        "**/utils/tests/**/*"
       ]
     }],
     "import/extensions": [
