@@ -122,7 +122,7 @@
           ["/^react$/", "/^react-native$/", "/^next/", "/^react-dom$/"],
           "module",
           [
-            "/^@(common|components|constants|contexts|mocks|services|styles|utils|shared|store)/",
+            "/^@(common|components|constants|contexts|hooks|mocks|pages|routes|services|styles|utils|shared|store)/",
             "/^~/"
           ],
           ["parent", "sibling", "index"]
