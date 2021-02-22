@@ -10,8 +10,14 @@
       "@constants/*": ["constants/*"],
       "@contexts": ["contexts"],
       "@contexts/*": ["contexts/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
       "@mocks": ["mocks"],
       "@mocks/*": ["mocks/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@routes": ["routes"],
+      "@routes/*": ["routes/*"],
       "@services": ["services"],
       "@services/*": ["services/*"],
       "@styles": ["styles"],
@@ -21,7 +27,7 @@
       "@shared": ["shared"],
       "@shared/*": ["shared/*"],
       "@store": ["store"],
-      "@store/*": ["store/*"],
+      "@store/*": ["store/*"]
     }
-  },
+  }
 }
