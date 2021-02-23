@@ -119,10 +119,10 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          ["/^react$/", "/^react-native$/", "/^next/", "/^react-dom$/"],
+          ["/^react$/", "/^react-(native|dom)$/", "/^next/"],
           "module",
           [
-            "/^@(common|components|constants|contexts|hooks|mocks|pages|routes|services|styles|utils|shared|store)/",
+            "/^@(assets|common|components|constants|contexts|hooks|mocks|pages|routes|services|styles|utils|shared|store)/",
             "/^~/"
           ],
           ["parent", "sibling", "index"]
