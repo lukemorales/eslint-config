@@ -11,7 +11,6 @@
     "airbnb",
     "plugin:react-redux/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:jest/recommended",
     "plugin:jest/style",
     "plugin:jest-formatting/recommended",
