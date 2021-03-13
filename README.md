@@ -24,9 +24,6 @@ npx install-peerdeps --dev @lukemorales/eslint-config -Y
    "extends": [
       "@lukemorales"
    ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
 },
 ```
 
@@ -37,9 +34,6 @@ You can alternatively create a `.eslintrc` file in the root of your project's di
   "extends": [
     "@lukemorales"
   ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
 }
 ```
 
