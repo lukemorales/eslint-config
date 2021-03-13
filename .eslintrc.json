@@ -40,7 +40,6 @@
     "jest-dom",
     "testing-library",
     "prettier",
-    "ts-exports",
     "import-helpers"
   ],
   "settings": {
