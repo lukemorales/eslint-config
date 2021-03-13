@@ -30,6 +30,7 @@
   },
   "plugins": [
     "radar",
+    "10x",
     "react",
     "react-redux",
     "react-hooks",
@@ -39,11 +40,15 @@
     "jest-dom",
     "testing-library",
     "prettier",
+    "ts-exports",
     "import-helpers"
   ],
   "settings": {
     "import/resolver": {
       "typescript": {}
+    },
+    "jest" : {
+      "version": "26.6.0"
     }
   },
   "rules": {
@@ -57,17 +62,24 @@
     "arrow-body-style": ["error", "as-needed"],
     "implicit-arrow-linebreak": "off",
     "camelcase":"off",
+    "class-methods-use-this": "off",
+    "no-useless-constructor": "off",
     "no-console": ["warn", { "allow": ["warn", "error"] }],
     "no-unused-expressions": "off",
     "no-use-before-define": "off",
+    "no-unneeded-ternary": "error",
     "no-param-reassign": ["error", {
       "props": true,
       "ignorePropertyModificationsForRegex": ["^draft"]
     }],
     "prefer-template": "error",
     "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "argsIgnorePattern": "_"
+    }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": [
       "error",
@@ -89,10 +101,11 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "error",
     "react-redux/useSelector-prefer-selectors": ["error", { "matching": "^select.*"}],
     "import/prefer-default-export": "off",
     "import/no-duplicates": "off",
+    "import/no-useless-path-segments": ["error", {   "noUselessIndex": true }],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "**/test.ts?(x)",
@@ -124,10 +137,66 @@
             "/^@(assets|common|components|constants|contexts|hooks|mocks|pages|routes|services|styles|utils|shared|store)/",
             "/^~/"
           ],
-          ["parent", "sibling", "index"]
+          ["parent", "sibling"],
+          "index"
         ],
         "alphabetize": { "order": "ignore", "ignoreCase": true }
       }
-    ]
+    ],
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": true,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowLiteral": true,
+        "allowObject": true
+      }
+    ],
+    "ts-exports/unused-exports": "error",
+    "10x/no-full-import": "error",
+    "10x/react-in-scope": "off",
+    "10x/auto-import": [
+			"error",
+			{
+				"imports": {
+          "path": "import path from 'path'",
+					"styled": "import styled from 'styled-components'",
+          "View": "import { View } from 'react-native'",
+          "Text": "import { Text } from 'react-native-normalized'",
+          "Image": "import { Image } from 'react-native-normalized'",
+          "TextInput": "import { TextInput } from 'react-native-normalized'",
+          "ScrollView": "import { ScrollView } from 'react-native'",
+          "StyleSheet": "import { StyleSheet } from 'react-native'",
+          "TouchableOpacity": "import { TouchableOpacity } from 'react-native'",
+          "TouchableWithoutFeedback": "import { TouchableWithoutFeedback } from 'react-native'",
+          "TouchableHighlight": "import { TouchableHighlight } from 'react-native'",
+          "ActivityIndicator": "import { ActivityIndicator } from 'react-native-normalized'",
+          "lighten": "import { lighten } from 'polished'",
+          "darken": "import { darken } from 'polished'",
+          "Animated": "import Animated from 'react-native-reanimated'",
+          "getWeeksInMonth": "import { getWeeksInMonth } from 'date-fns'",
+          "startOfMonth": "import { startOfMonth } from 'date-fns'",
+          "getDaysInMonth": "import { getDaysInMonth } from 'date-fns'",
+          "getISODay": "import { getISODay } from 'date-fns'",
+          "format": "import { format } from 'date-fns'",
+          "getWeek": "import { getWeek } from 'date-fns'",
+          "setDate": "import { setDate } from 'date-fns'",
+          "endOfWeek": "import { endOfWeek } from 'date-fns'",
+          "startOfWeek": "import { startOfWeek } from 'date-fns'",
+          "useRef": "import { useRef } from 'react'",
+          "useEffect": "import { useEffect } from 'react'",
+          "useState": "import { useState } from 'react'",
+          "useCallback": "import { useCallback } from 'react'",
+          "useMemo": "import { useMemo } from 'react'",
+          "useReducer": "import { useReducer } from 'react'",
+          "Fragment": "import { Fragment } from 'react'",
+          "useQuery": "import { useQuery } from 'react-query'",
+          "useMutation": "import { useMutation } from 'react-query'"
+				}
+			}
+		]
   }
 }
