@@ -67,6 +67,8 @@
     "no-unused-expressions": "off",
     "no-use-before-define": "off",
     "no-unneeded-ternary": "error",
+    "no-unused-vars": "off",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-param-reassign": ["error", {
       "props": true,
       "ignorePropertyModificationsForRegex": ["^draft"]
@@ -77,7 +79,7 @@
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-unused-vars": ["warn", {
-      "argsIgnorePattern": "_"
+      "argsIgnorePattern": "^_"
     }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": [
@@ -104,6 +106,7 @@
     "react-redux/useSelector-prefer-selectors": ["error", { "matching": "^select.*"}],
     "import/prefer-default-export": "off",
     "import/no-duplicates": "off",
+    "import/no-named-as-default": "off",
     "import/no-useless-path-segments": ["error", {   "noUselessIndex": true }],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
