@@ -79,7 +79,8 @@
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-unused-vars": ["warn", {
-      "argsIgnorePattern": "^_"
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_$|[iI]gnored"
     }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": [
